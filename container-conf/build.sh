@@ -8,5 +8,6 @@ build_as_root() {
     cd "$build_guest_conf"
     build_create_run_user
     # we generate a single config /etc/my.cnf, and this has higher priority
-    rm -rf /etc/mysql
+    rm -rf /etc/mysql /var/lib/mysql
+    ln -s -r '{{ owncloud_mariadb.db_d }}' /var/lib/mysql
 }
