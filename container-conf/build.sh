@@ -2,6 +2,7 @@
 build_image_base=mariadb:10.2.14
 build_is_public=1
 build_simply=1
+build_docker_user=$build_run_user
 build_dockerfile_aux='ENTRYPOINT []'
 
 build_as_root() {
